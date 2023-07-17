@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.loginScreen{
+    position : relative;
+    height: 100vh;
+    background: url(../image/netflixCover.jpg) center no-repeat;
+    background-size: cover;
+}
+.loginScreen_logo{
+    position: fixed;
+    left: 0;
+    width: 150px;
+    object-fit: contain;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.loginScreen_body > h4 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.loginScreen_body > h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.loginScreen_body > h1 {
+    font-size: 3.125rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.loginScreen_body{
+    position: absolute;
+    width: 95%;
+    top: 35%;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.loginScreen_button{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.loginScreen_gradient{
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to top, 
+      rgba(0, 0, 0, 0.8)0%,
+      rgba(0,0,0,0)60%,
+      rgba(0, 0, 0, 0.8)100%);
+}
+.loginScreen_input{
+    width: 100%;
+    
+}
+.loginScreen_input > form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.loginScreen_input > form > input{
+    padding: 25px;
+    height: 40px;
+    width: 25%;
+    border: 0.5px solid rgb(101, 98, 98);
+    border-radius: 3px;
+    background-color: rgb(10 9 9 / 40%);
+    color: white;
+    max-width: 600px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-right: 8px;
+}
+.loginScreen_input > form > input::placeholder{
+    color: rgb(201, 191, 191);
+}
+.login_getstarted{
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
