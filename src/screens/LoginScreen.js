@@ -15,9 +15,15 @@ function LoginScreen() {
             className='loginScreen_logo'
             src={logo} 
             alt=''/>
-            <button className='loginScreen_button' onClick={() => setSignIn(true)}>
+            { signIn ? (
+                <></>
+            ):(
+                <button className='loginScreen_button' onClick={() => setSignIn(true)}>
                 Sign In
             </button>
+             
+            )}
+            
             <div className='loginScreen_gradient'></div>
         </div>
 

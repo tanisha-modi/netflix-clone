@@ -62,7 +62,7 @@
     width: 100%;
     z-index: 1;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(
         to top, 
       rgba(0, 0, 0, 0.8)0%,
