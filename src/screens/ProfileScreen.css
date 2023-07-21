@@ -47,6 +47,7 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
 }
 .profileScreen_plans{
     margin-top: 20px;
@@ -54,4 +55,40 @@
 .profileScreen_plans > h3{
     border-bottom: 1px solid #282c2d;
     padding-bottom: 10px;
+}
+.profileScreen_plans > h5{
+    color: gray;
+}
+.plan_row{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(235, 230, 230);
+}
+.plan_row > .row_item >h2{
+    font-size: 0.9rem;
+}
+.plan_btn{
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.current_btn{
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    color: white;
+    background-color: gray;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.profileScreen_plans > .plan_row > h6{
+    font-size: 0.8rem;
 }

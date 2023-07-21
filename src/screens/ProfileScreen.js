@@ -9,6 +9,9 @@ import { auth } from "../firebase";
 function ProfileScreen() {
   const user  = useSelector(selectUser);
 
+  const current = new Date();
+  const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+  
   return (
     <div className='profileScreen'>
         <Nav />
@@ -18,10 +21,52 @@ function ProfileScreen() {
             <img src={avatar} alt=''/>
             <div className='profileScreen_details'>
               <h2>{user.email}</h2>
+
+
               <div className='profileScreen_plans'>
-                <h3>Plans (Current Plan: premium)</h3>
+                <h3>Plans (Current Plan: Basic)</h3>
+                {/* <h5>Renewal date: {new Date().toLocaleString()}</h5> */}
+                <h5>Renewal date: {date}</h5>
+
+                <div className='plan_row'>
+                <div className='row_item'>
+                <h2>Netflix Premium</h2>
+                <h6>4K (Ultra HD) + HDR</h6>
+                  </div>
+                  <button className='plan_btn'>Subscribe</button>
+                </div>
+
+
+                <div className='plan_row'>
+                  <div className='row_item'>
+                  <h2>Netflix Standard</h2>
+                  <h6>1080p (Full HD)</h6>
+                  </div>
+                  <button className='plan_btn'>Subscribe</button>
+                </div>
+
+
+                <div className='plan_row'>
+                <div className='row_item'>
+                <h2>Netflix Basic</h2>
+                  <h6>720p (HD)</h6>
+                  </div>
+                  <button className='current_btn'>Current Package</button>
+                </div>
+
+
+                <div className='plan_row'>
+                <div className='row_item'>
+                <h2>Netflix Mobile</h2>
+                  <h6>480p</h6>
+                  </div>
+                  <button className='plan_btn'>Subscribe</button>
+                </div>
                 <button onClick={() => auth.signOut()} className='profileScreen_signOut'>Sign Out</button>
               </div>
+
+
+
             </div>
           </div>
         </div>
