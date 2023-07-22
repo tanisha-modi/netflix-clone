@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Nav.css";
-import logo from "./image/net.png";
-import avatar from "./image/netflix-avatar.jpg";
+import logo from "../image/net.png";
+import avatar from "../image/netflix-avatar.jpg";
 import { useNavigate} from 'react-router';
 
 function Nav() {

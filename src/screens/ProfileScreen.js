@@ -1,7 +1,7 @@
 import React from 'react'
 import './ProfileScreen.css'
 import { useSelector } from "react-redux";
-import Nav from "../Nav";
+import Nav from "../Components/Nav";
 import { selectUser } from "../features/userSlice";
 import avatar from '../image/netflix-avatar.jpg';
 import { auth } from "../firebase";

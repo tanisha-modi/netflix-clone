@@ -42,7 +42,6 @@ function SignUpScreen() {
 
         <span className='signUp_gray'>New to Netflix?<span className='signUp_link' onClick={register}> Sign up now.</span></span>
         <span className='signUp_privacyLine'>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href='https://policies.google.com/privacy'> Learn more.</a></span>
-
       </form>
     </div>
   )
