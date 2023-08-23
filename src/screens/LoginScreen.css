@@ -10,6 +10,7 @@
     background-size: cover;
 }
 .loginScreen_logo{
+    z-index: 1;
     position: fixed;
     left: 0;
     width: 150px;
@@ -47,9 +48,10 @@
     text-align: center;
 }
 .loginScreen_button{
+    z-index: 1;
     position: fixed;
     right: 20px;
-    top: 20px;
+    top: 15px;
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -135,12 +137,6 @@
     /* flex-wrap: wrap; */
     /* gap: 1.5rem; */
 }
-.tv1{
-    z-index: 1;
-}
-.img{
-    /* background-color: black; */
-}
 .text{
     display: flex;
     flex-direction: column;
@@ -158,53 +154,28 @@
     margin: 0.5rem 0 1rem;
     text-align: justify;
 }
-.extraIMG >img {
-    position: relative;
-    /* top: 80px; */
-    height: 300px;
-    width: 500px;
-    right: 100px;
-}
+  .tv {
+    z-index: 2;
+    display: block;
+    background: url(../image/meri.JPG) center no-repeat;
+    background-size: 70%;
+  }
+  .navb{
+    background-color: black;
+  }
+  .nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 38px;
+    padding: 10px;
+    align-items: center;
+    z-index: 1;
 
-/* footer */
-.footer{ 
-    padding-top: 10px;
-    padding-bottom: 70px;
-    background-color: #000000;
-    color: rgb(179, 179, 179);
- }
- .foot-panel1{
-     margin-top: 50px;
-     height: 50px;
-     font-size: 1.1rem;
-     margin-left: 14vw;
- }
- .foot-panel1 > span{
-    text-decoration: underline;
- }
-
- .foot-panel2{
-     height: 300px;
-     display: flex;
- }
- .foot-panel2 ul{
-     margin-top: 20px;
-     margin-left: 14vw;
- }
- .foot-panel2 a{
-     text-decoration: underline;
-     color: rgb(201, 200, 200);
-     display: block;
-     font-size: 1rem;
-     margin-top: 10px;
- }
-.foot-panel3{
-    /* height: 70px; */
-    font-size: 1.2rem;
-    margin-left: 14vw;
-    margin-top: -50px;
+    /* animation */
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
 }
- 
 
 @media (max-width:900px){
      .login_footer{

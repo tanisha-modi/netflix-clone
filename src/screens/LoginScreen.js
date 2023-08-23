@@ -1,19 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginScreen.css";
 import logo from "../image/net.png";
 import tv from "../image/tv.png";
 import tv2 from "../image/tv2.jpg";
 import tv3 from "../image/tv3.png";
 import tv4 from "../image/tv4.png";
-import meri from "../image/meri.JPG";
+import Footer from "../Components/Footer";
 import SignUpScreen from "./SignUpScreen";
 // import cover_photo from '../image/netflixCover.jpg';
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
 
+  const [show, handleShow] = useState(false);
+
+  const transitionNavBar =() =>{
+    if(window.scrollY > 100){
+      handleShow(true);
+    }else{
+      handleShow(false);
+    }
+  }
+    useEffect(() => {
+        window.addEventListener("scroll",  transitionNavBar)
+        return () => window.removeEventListener('scroll', transitionNavBar)
+      }, []);
+
   return (
     <div className="login">
+      <div className={`nav ${show && 'navb'}`}>
+      </div>
       <div className="loginScreen">
         <div className="loginScreen_background">
           <img className="loginScreen_logo" src={logo} alt="" />
@@ -58,6 +74,10 @@ function LoginScreen() {
           )}
         </div>
       </div>
+      <div className="Screen_body">
+          {signIn ? (
+             <></>
+          ) : (
       <div className="containers">
         <div className="hr"></div>
         <div className="login_footer">
@@ -69,11 +89,8 @@ function LoginScreen() {
             </span>
           </div>
           <div className="img">
-            <img src={tv} alt="" />
-            <div className="extraIMG">
-            <img src={meri} alt="" />
-            </div>
-          </div>
+   <img className="tv" src={tv} alt="Base" />
+</div>
         </div>
         <div className="hr"></div>
         <div className="login_footer rev">
@@ -114,39 +131,10 @@ function LoginScreen() {
           </div>
         </div>
       </div>
+       )}
+       </div>
       <div className="hr"></div>
-      <div className="footer">
-        {/* <!-- panel1 --> */}
-        <div className="foot-panel1">Questions? Call <span>000-800-919-1694</span></div>
-
-        {/* <!-- panel2 --> */}
-        <div className="foot-panel2">
-          <ul>
-            <a href="https://help.netflix.com/en/node/412">FAQ</a>
-            <a href="https://media.netflix.com/en/">Media Centre</a>
-            <a href="https://devices.netflix.com/en/">Ways to Watch</a>
-            <a href="/">Cookie Preferences</a>
-            <a href="https://fast.com/">Speed Test</a>
-          </ul>
-          <ul>
-            <a href="https://help.netflix.com/en/">Help Centre</a>
-            <a href="https://ir.netflix.net/ir-overview/profile/default.aspx">Investor Relations</a>
-            <a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a>
-            <a href="https://help.netflix.com/legal/corpinfo">Corporate Information</a>
-            <a href="https://help.netflix.com/legal/notices">Legal Notices</a>
-          </ul>
-          <ul>
-            <a href="/">Account</a>
-            <a href="https://jobs.netflix.com/">Jobs</a>
-            <a href="https://help.netflix.com/legal/privacy">Privacy</a>
-            <a href="https://help.netflix.com/en/contactus">Contact Us</a>
-            <a href="https://www.netflix.com/in/browse/genre/839338">Only on Netflix</a>
-          </ul>
-        </div>
-
-        {/* <!-- panel 3 --> */}
-        <div className="foot-panel3">Netflix India</div>
-      </div>
+      <Footer/>
     </div>
   );
 }
