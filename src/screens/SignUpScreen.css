@@ -2,7 +2,7 @@
     min-width: 250px;
     width: 20%;
     padding: 70px;
-    padding-bottom: 150px;
+    padding-bottom: 142px;
     margin-left: auto;
     margin-right: auto;
     background: rgba(0, 0, 0, 0.75);
@@ -63,4 +63,10 @@
 a{
     text-decoration: none;
     color: rgb(55, 55, 253);
+}
+
+@media (max-width:900px) {
+    .signUpScreen{
+        margin-top: -130px
+    }
 }

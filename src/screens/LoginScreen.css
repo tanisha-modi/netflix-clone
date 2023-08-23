@@ -34,7 +34,7 @@
 }
 .loginScreen_body{
     position: absolute;
-    width: 95%;
+    width: 90%;
     top: 35%;
     z-index: 1;
     color: white;
@@ -44,6 +44,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    text-align: center;
 }
 .loginScreen_button{
     position: fixed;
@@ -71,23 +72,24 @@
 }
 .loginScreen_input{
     width: 100%;
-    
 }
 .loginScreen_input > form {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .loginScreen_input > form > input{
     padding: 25px;
     height: 40px;
-    width: 25%;
+    width: 100%;
     border: 0.5px solid rgb(101, 98, 98);
     border-radius: 3px;
     background-color: rgb(10 9 9 / 50%);
     color: white;
-    max-width: 600px;
+    min-width: 300px;
+    max-width: 350px;
     box-sizing: border-box;
     font-size: 1rem;
     font-weight: 200;
@@ -121,6 +123,7 @@
     width: 100%;
 }
 .login_footer{
+    z-index: 0;
     margin-top: 30px;
     /* margin-bottom: 30px; */
     margin-left: 10vw;
@@ -132,8 +135,11 @@
     /* flex-wrap: wrap; */
     /* gap: 1.5rem; */
 }
+.tv1{
+    z-index: 1;
+}
 .img{
-    background-color: black;
+    /* background-color: black; */
 }
 .text{
     display: flex;
@@ -151,6 +157,13 @@
     font-size: 1.5rem;
     margin: 0.5rem 0 1rem;
     text-align: justify;
+}
+.extraIMG >img {
+    position: relative;
+    /* top: 80px; */
+    height: 300px;
+    width: 500px;
+    right: 100px;
 }
 
 /* footer */
@@ -192,3 +205,71 @@
     margin-top: -50px;
 }
  
+
+@media (max-width:900px){
+     .login_footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .img > img{
+        max-width: 750px;
+        max-height: 380px;
+    }
+    .rev{
+         flex-direction: column-reverse;
+     }
+}
+@media (max-width:800px){
+    .loginScreen_gradient{
+        height: 70vh;
+    }
+    .loginScreen{
+        height: 70vh;
+    }
+    .loginScreen_body{
+        top: 25%;
+    }
+    .login_getstarted{
+        margin-top: 5px;
+    }
+     .login_footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .img > img{
+        max-width: 500px;
+        max-height: 300px;
+    }
+    .rev{
+         flex-direction: column-reverse;
+     }
+}
+@media (max-width:500px){
+.loginScreen_gradient{
+    height: 70vh;
+}
+    .loginScreen{
+        height: 70vh;
+    }
+    .loginScreen_body{
+        top: 20%;
+    }
+    .login_getstarted{
+        margin-top: 10px;
+    }
+    .login_footer{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .img > img{
+        max-width: 500px;
+        max-height: 220px;
+    }
+    .rev{
+         flex-direction: column-reverse;
+     }
+}

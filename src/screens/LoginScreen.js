@@ -5,6 +5,7 @@ import tv from "../image/tv.png";
 import tv2 from "../image/tv2.jpg";
 import tv3 from "../image/tv3.png";
 import tv4 from "../image/tv4.png";
+import meri from "../image/meri.JPG";
 import SignUpScreen from "./SignUpScreen";
 // import cover_photo from '../image/netflixCover.jpg';
 
@@ -69,10 +70,13 @@ function LoginScreen() {
           </div>
           <div className="img">
             <img src={tv} alt="" />
+            <div className="extraIMG">
+            <img src={meri} alt="" />
+            </div>
           </div>
         </div>
         <div className="hr"></div>
-        <div className="login_footer">
+        <div className="login_footer rev">
           <div className="img">
             <img src={tv2} alt="" />
           </div>
@@ -97,7 +101,7 @@ function LoginScreen() {
           </div>
         </div>
         <div className="hr"></div>
-        <div className="login_footer">
+        <div className="login_footer rev">
           <div className="img">
             <img src={tv4} alt="" />
           </div>
