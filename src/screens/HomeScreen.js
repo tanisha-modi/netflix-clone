@@ -13,11 +13,11 @@ function HomeScreen() {
       <Banner/>
 
       <Row 
-      title="NETFLIX ORIGINALS" 
-      fetchUrl={request.fetchNetflixOriginals} 
+      title="TRENDING NOW" 
+      fetchUrl={request.fetchTrending} 
       isLargeRow = {true}
       />
-      <Row title="Trending Now" fetchUrl={request.fetchTrending} />
+      <Row title="Netflix Originals" fetchUrl={request.fetchNetflixOriginals} />
       {/* <Row title="Top Rated" fetchUrl={request.fetchTopRated} /> */}
       <Row title="Action Movies" fetchUrl={request.fetchActionMovies} />
       <Row title="Comedy Movies" fetchUrl={request.fetchComedyMovies} />

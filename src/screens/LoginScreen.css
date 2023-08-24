@@ -160,6 +160,12 @@
     background: url(../image/meri.JPG) center no-repeat;
     background-size: 70%;
   }
+  .tv3{
+    z-index: 2;
+    display: block;
+    background: url(../image/meri.JPG) center no-repeat;
+    background-size: 70%;
+  }
   .navb{
     background-color: black;
   }
@@ -177,15 +183,44 @@
     transition: all 0.5s;
 }
 
+@media (max-width:1024px){
+   .img > img{
+       max-width: 750px;
+       max-height: 350px;
+   }
+}
 @media (max-width:900px){
+    .loginScreen_body > h1 {
+        font-size: 2.8rem;
+    }
+    .loginScreen_body > h4{
+        font-size: 1.8rem;
+    }
+    .loginScreen_gradient{
+        height: 70vh;
+    }
+    .loginScreen{
+        height: 70vh;
+    }
+    .loginScreen_body{
+        top: 28%;
+    }
      .login_footer{
         display: flex;
         flex-direction: column;
         text-align: center;
     }
+    .text > h2{
+        font-size: 2.5rem;
+    }
+    .text > span{
+        font-size: 1.5rem;
+        margin: 0.1rem 0 0.5rem;
+        text-align: justify;
+    }
     .img > img{
         max-width: 750px;
-        max-height: 380px;
+        max-height: 320px;
     }
     .rev{
          flex-direction: column-reverse;
@@ -199,7 +234,7 @@
         height: 70vh;
     }
     .loginScreen_body{
-        top: 25%;
+        top: 22%;
     }
     .login_getstarted{
         margin-top: 5px;
@@ -208,6 +243,14 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+    .text > h2{
+        font-size: 2rem;
+    }
+    .text > span{
+        font-size: 1rem;
+        margin: 0.5rem 0 1rem;
+        text-align: justify;
     }
     .img > img{
         max-width: 500px;
@@ -218,6 +261,12 @@
      }
 }
 @media (max-width:500px){
+    .loginScreen_body > h1 {
+        font-size: 2rem;
+    }
+    .loginScreen_body > h4{
+        font-size: 1.2rem;
+    }
 .loginScreen_gradient{
     height: 70vh;
 }
@@ -235,6 +284,14 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+    .text > h2{
+        font-size: 2rem;
+    }
+    .text > span{
+        font-size: 1rem;
+        margin: 0.5rem 0 1rem;
+        text-align: justify;
     }
     .img > img{
         max-width: 500px;

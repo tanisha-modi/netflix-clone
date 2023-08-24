@@ -32,7 +32,13 @@ function LoginScreen() {
       </div>
       <div className="loginScreen">
         <div className="loginScreen_background">
-          <img className="loginScreen_logo" src={logo} alt="" />
+          {/* <img className="loginScreen_logo" src={logo} alt=""/> */}
+          {signIn ? (
+            <img className="loginScreen_logo" onClick={() => setSignIn(false)} src={logo} alt=""/>
+          ) : (
+            <img className="loginScreen_logo" src={logo} alt=""/>
+          )}
+          
           {signIn ? (
             <></>
           ) : (
@@ -114,7 +120,7 @@ function LoginScreen() {
             </span>
           </div>
           <div className="img">
-            <img src={tv3} alt="" />
+            <img className="tv3" src={tv3} alt="" />
           </div>
         </div>
         <div className="hr"></div>
