@@ -37,7 +37,7 @@
     position: absolute;
     width: 90%;
     top: 35%;
-    z-index: 1;
+    z-index: 0;
     color: white;
     display: flex;
     flex-direction: column;
@@ -314,7 +314,7 @@
     top: 0; 
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;  
+    z-index: 0;  
   }
   .video-bg2{
     position: absolute;
