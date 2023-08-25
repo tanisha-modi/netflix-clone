@@ -288,6 +288,21 @@
     .rev{
          flex-direction: column-reverse;
      }
+    /* .video-container {
+        max-width: 400px;
+        max-height: 320px;
+        left: 0;
+     }
+     .image-overlay { */
+        /* position: absolute;
+        top: 0; 
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;   */
+        /* max-width: 300px;
+        max-height: 320px;
+        left: 0rem;
+      } */
 }
 
 

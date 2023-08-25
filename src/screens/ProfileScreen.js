@@ -5,12 +5,19 @@ import Nav from "../Components/Nav";
 import { selectUser } from "../features/userSlice";
 import avatar from '../image/netflix-avatar.jpg';
 import { auth } from "../firebase";
+import { useNavigate} from 'react-router';
 
 function ProfileScreen() {
   const user  = useSelector(selectUser);
+  const navigate = useNavigate();
 
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+
+  const  removeProfile = () => {
+    navigate('/');
+    auth.signOut();
+  };
   
   return (
     <div className='profileScreen'>
@@ -62,7 +69,7 @@ function ProfileScreen() {
                   </div>
                   <button className='plan_btn'>Subscribe</button>
                 </div>
-                <button onClick={() => auth.signOut()} className='profileScreen_signOut'>Sign Out</button>
+                <button onClick={() => removeProfile()} className='profileScreen_signOut'>Sign Out</button>
               </div>
 
 

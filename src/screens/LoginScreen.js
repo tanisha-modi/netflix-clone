@@ -102,7 +102,7 @@ function LoginScreen() {
               </div>
               <div className="video-container">
                 <div className="image-overlay">
-                  <img src={tv} alt="Overlay" />
+                  <img className="img" src={tv} alt="Overlay" />
                   <video autoPlay loop muted className="video-bg">
                     <source src={netflix1} type="video/mp4" />
                     Your browser does not support the video tag.
@@ -134,7 +134,7 @@ function LoginScreen() {
               </div>
               <div className="video-container">
                 <div className="image-overlay">
-                  <img src={tv3} alt="Overlay" />
+                  <img className="img" src={tv3} alt="Overlay" />
                   <video autoPlay loop muted className="video-bg2">
                     <source src={netflix2} type="video/mp4" />
                     Your browser does not support the video tag.
