@@ -15,6 +15,7 @@ function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
 
   const [show, handleShow] = useState(false);
+  const [email, setEmail] = useState("");
 
   const transitionNavBar = () => {
     if (window.scrollY > 50) {
@@ -50,7 +51,7 @@ function LoginScreen() {
           ) : (
             <button
               className="loginScreen_button"
-              onClick={() => setSignIn(true)}
+              onClick={() => {setEmail(""); setSignIn(true)}}
             >
               Sign In
             </button>
@@ -73,9 +74,24 @@ function LoginScreen() {
 
               <div className="loginScreen_input">
                 <form>
-                  <input type="email" placeholder="Email address" />
+                  <div className="inputdata">
+                    {/* <input type="email" placeholder="Email address" name="email" */}
+                    <input
+                      type="email"
+                      name="email"
+                      className={email ? "has-content" : ""}
+                      value={email}
+                      onChange={(event) => setEmail(event.target.value)}
+                      autoComplete="off"
+                      required
+                    />
+                    <label htmlFor="email">Email address</label>
+                  </div>
                   <button
-                    onClick={() => setSignIn(true)}
+                    onClick={() => {
+                      setEmail("");
+                      setSignIn(true);
+                    }}
                     className="login_getstarted"
                   >
                     Get Started {">"}

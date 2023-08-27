@@ -19,12 +19,12 @@
     padding-top: 10px;
 }
 .loginScreen_body > h4 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 400;
     margin-bottom: 20px;
 }
 .loginScreen_body > h5 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -34,8 +34,9 @@
     margin-bottom: 20px;
 }
 .loginScreen_body{
+    left: 20px;
     position: absolute;
-    width: 90%;
+    width: 85%;
     top: 35%;
     z-index: 0;
     color: white;
@@ -68,9 +69,9 @@
     background: rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(
         to top, 
-      rgba(0, 0, 0, 0.7)0%,
-      rgba(0,0,0,0)60%,
-      rgba(0, 0, 0, 0.7)100%);
+      rgba(0, 0, 0, 0.8)0%,
+      rgba(0,0,0,0.2)60%,
+      rgba(0, 0, 0, 0.8)100%);
 }
 .loginScreen_input{
     width: 100%;
@@ -382,3 +383,66 @@
       height: 30%;  
     }
   } */
+
+
+
+
+  /* ---------------get started k pass wala input----------- */
+
+    .loginScreen_input > form > .inputdata {
+    width: 100%;
+    min-width: 300px;
+    max-width: 350px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: rgba(47, 45, 54, 0.2);
+}
+
+.loginScreen_input > form > .inputdata > input{
+    width: 100%;
+    color: white;
+    margin-right: 8px; 
+    min-width: 300px;
+    max-width: 350px;
+  background-color: rgb(10 9 9 / 50%);
+  display: block;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 20px;
+  padding-top: 30px;
+  height: 46px;
+  border: none;
+  box-sizing: border-box;
+  border: 1.5px solid rgb(101, 98, 98);
+  border-radius: 4px;
+}
+.loginScreen_input > form > .inputdata label {
+     text-align: left;
+     width: 90%;
+    color: rgb(163, 159, 159);
+  position: absolute;
+  pointer-events: none;
+  font-weight: 600;
+  background: transparent;
+  bottom: 15px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.loginScreen_input > form > .inputdata input:focus,
+.loginScreen_input > form > .inputdata input:valid{
+    outline: 2px solid white;
+}
+
+.loginScreen_input > form > .inputdata input:focus ~ label,
+.loginScreen_input > form > .inputdata input:valid ~ label{
+  transform: translateY(-16px);
+  font-size: 12px;
+  color: rgb(163, 159, 159);
+}
+.loginScreen_input > form > .inputdata input.has-content + label{
+    transform: translateY(-16px);
+  font-size: 12px;
+  color: rgb(163, 159, 159);
+}
